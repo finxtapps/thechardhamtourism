@@ -1,0 +1,263 @@
+.tour-details-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    background: #fdfdfd;
+}
+
+.tour-details-header {
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.tour-details-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.price-tag {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 25px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.tour-details-content {
+    padding: 0 20px;
+}
+
+.overview, .itinerary, .inclusions-exclusions {
+    margin-bottom: 50px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #ff5e62;
+    border-radius: 2px;
+}
+
+.overview p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.itinerary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
+
+.itinerary-list::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #eee;
+}
+
+.itinerary-item {
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.day-circle {
+    min-width: 50px;
+    height: 50px;
+    background: #ff9966;
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(255, 94, 98, 0.3);
+}
+
+.itinerary-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.itinerary-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.inclusions-exclusions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.inclusions-exclusions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.inclusions-exclusions li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+.inclusions i {
+    color: #2ecc71;
+}
+
+.exclusions i {
+    color: #e74c3c;
+}
+
+.booking-section {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.book-now-btn {
+    display: inline-block;
+    padding: 18px 45px;
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(255, 94, 98, 0.2);
+}
+
+.book-now-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 94, 98, 0.3);
+}
+
+.tour-details-error {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .tour-details-header {
+        height: 350px;
+        border-radius: 0 0 15px 15px;
+        margin-bottom: 30px;
+    }
+
+    .tour-details-header h1 {
+        font-size: 2.2rem;
+        padding: 0 15px;
+    }
+
+    .price-tag {
+        font-size: 1.4rem;
+        padding: 8px 20px;
+    }
+
+    .tour-details-content {
+        padding: 0 15px;
+    }
+
+    .inclusions-exclusions {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .itinerary-list::before {
+        left: 20px;
+    }
+
+    .itinerary-item {
+        gap: 15px;
+    }
+
+    .day-circle {
+        min-width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .itinerary-info h3 {
+        font-size: 1.15rem;
+    }
+
+    .itinerary-info p {
+        font-size: 0.95rem;
+    }
+
+    .book-now-btn {
+        padding: 15px 35px;
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .tour-details-header {
+        height: 300px;
+    }
+
+    .tour-details-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .day-circle {
+        min-width: 36px;
+        height: 36px;
+    }
+    
+    .itinerary-list::before {
+        left: 18px;
+    }
+}

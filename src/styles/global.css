@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f6f8fb;
+  color: #14213d;
+  font-family: 'Poppins', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Improve mobile tapping */
+a, button {
+  touch-action: manipulation;
+}
+
+.page {
+  padding: 80px 40px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.service-page {
+  padding: 70px 20px;
+}
+
+.service-hero {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 38px;
+  align-items: center;
+}
+
+.service-hero span {
+  color: #1299df;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.service-hero h1 {
+  margin: 8px 0 14px;
+  color: #0f172a;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.service-hero p {
+  color: #64748b;
+  line-height: 1.8;
+  font-size: 1rem;
+  max-width: 560px;
+}
+
+.service-hero img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
+}
+
+.service-cta {
+  width: fit-content;
+  min-height: 44px;
+  margin-top: 24px;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1299df, #11a66a);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.service-points {
+  width: min(1180px, 100%);
+  margin: 34px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.service-points article {
+  padding: 24px;
+  border: 1px solid #e8eef5;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.service-points h3 {
+  color: #0f172a;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.service-points p {
+  color: #64748b;
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 840px) {
+  .service-hero,
+  .service-points {
+    grid-template-columns: 1fr;
+  }
+
+  .service-hero img {
+    height: 260px;
+  }
+}

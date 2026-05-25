@@ -1,0 +1,200 @@
+.contact-page {
+  min-height: calc(100vh - 76px);
+  padding: 24px 20px 42px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f6f8fb;
+}
+
+.holiday-enquiry-form {
+  width: min(996px, 100%);
+  overflow: hidden;
+  border: 1px solid #dbe3ec;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+.form-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid #dbe3ec;
+}
+
+.form-header h1 {
+  color: #2b2f33;
+  font-size: 1.55rem;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.form-body {
+  padding: 24px 20px 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 30px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.full-width,
+.form-section-title,
+.traveller-grid {
+  grid-column: 1 / -1;
+}
+
+.field span,
+.traveller-field > span {
+  color: #2f3439;
+  font-size: 1.23rem;
+  font-weight: 500;
+}
+
+.field input {
+  width: 100%;
+  min-height: 47px;
+  border: 1px solid #d7dde5;
+  border-radius: 8px;
+  padding: 0 15px;
+  color: #252a30;
+  background: #ffffff;
+  outline: none;
+  font-size: 1.05rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input::placeholder {
+  color: #68717a;
+}
+
+.field input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+}
+
+.field input[readonly] {
+  background: #ffffff;
+}
+
+.form-section-title {
+  color: #0069ff;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-top: -2px;
+}
+
+.traveller-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.traveller-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.counter-box {
+  min-height: 54px;
+  display: grid;
+  grid-template-columns: 46px 1fr 46px;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #cfd7e0;
+  border-radius: 8px;
+  padding: 6px 11px;
+}
+
+.counter-box button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #7c8794;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #6c757d;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1;
+  transition: border 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.counter-box button:hover {
+  border-color: #0d6efd;
+  color: #0d6efd;
+  background: #eef5ff;
+}
+
+.counter-box strong {
+  color: #2b3035;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.form-actions {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-top: 1px solid #dbe3ec;
+}
+
+.secondary-action,
+.primary-action {
+  min-height: 47px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 17px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+.secondary-action {
+  background: #6c757d;
+}
+
+.primary-action {
+  background: #0d6efd;
+}
+
+.secondary-action:hover {
+  background: #5c636a;
+}
+
+.primary-action:hover {
+  background: #0b5ed7;
+}
+
+@media (max-width: 760px) {
+  .contact-page {
+    padding: 30px 12px 48px;
+  }
+
+  .form-body,
+  .traveller-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .form-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .field span,
+  .traveller-field > span {
+    font-size: 1rem;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+}
