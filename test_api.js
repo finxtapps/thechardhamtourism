@@ -1,0 +1,1 @@
+fetch('https://tour-plan-backend.onrender.com/api/enquiry', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ fullName: 'Test', mobileNumber: '123', email: 'test@example.com', packageName: 'test' }) }).then(res => res.json()).then(data => console.log(data)).catch(err => console.error(err));
